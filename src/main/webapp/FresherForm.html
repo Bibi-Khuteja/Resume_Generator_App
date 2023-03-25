@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
   <!------ Include the above in your HEAD tag ---------->
 
   <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
@@ -65,9 +64,6 @@
       display: none;
     }
 
-    #edu2 {
-      display: none;
-    }
 
     #edu3 {
       display: none;
@@ -77,15 +73,9 @@
       display: none;
     }
 
-    #pro1 {
-      display: none;
-    }
+
 
     #pro2 {
-      display: none;
-    }
-
-    #intern1 {
       display: none;
     }
 
@@ -93,11 +83,52 @@
       display: none;
     }
 
-    #person {
+
+    #skill2 {
       display: none;
     }
 
-    #skills {
+    #skill3 {
+      display: none;
+    }
+
+    #skill4 {
+      display: none;
+    }
+
+    #skill5 {
+      display: none;
+    }
+
+    #skill6 {
+      display: none;
+    }
+
+    #skill7 {
+      display: none;
+    }
+
+    #skill8 {
+      display: none;
+    }
+
+    #acti2 {
+      display: none;
+    }
+    #certi2 {
+      display: none;
+    }
+
+    #interest2 {
+      display: none;
+    }
+    #interest3 {
+      display: none;
+    }
+    #interest4 {
+      display: none;
+    }
+    #interest5 {
       display: none;
     }
 
@@ -118,14 +149,14 @@
       margin-top: px;
     }
 
-    .submit {
-      font-size: 1.1em;
-      float: right;
-      width: 150px;
+     .submit {
+      font-size: 1.8em;
+     
+      width: 500px;
       background-color: transparent;
       color: #151414;
 
-    }
+    } 
   </style>
 </head>
 
@@ -142,57 +173,26 @@
         <form>
           <div class="col-md-6 form-line">
             <div class="form-group">
-              <label for="id">ID</label>
-              <input type="text" id="id" class="form-control" placeholder="enter id"></input>
-            </div>
-            <div class="form-group">
               <label for="name">NAME</label>
-              <input type="text" id="name" name="name" class="form-control" placeholder="enter name"></input>
+              <input type="text" id="name" name="name" class="form-control" placeholder="required"></input>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="text" id="email" class="form-control" placeholder="enter email"></textarea>
+              <input type="text" id="email" class="form-control" placeholder="required"></textarea>
             </div>
             <div class="form-group">
               <label for="Phone">PHONE</label>
-              <input class="form-control" id="phone" placeholder="enter phone"></input>
+              <input class="form-control" id="phone" placeholder="required"></input>
             </div>
             <div class="form-group">
               <label for="object">OBJECTIVES</label>
-              <textarea class="form-control" id="object"></textarea>
+              <textarea class="form-control" id="object" placeholder="required"></textarea>
             </div>
+            <hr>
             <div class="form-group">
-              <div>
-                <label for="education">Master Degree:</label>
-                <p onclick="educationOne()" class="btn btn-lg">ADD</p>
-                <ul>
-                  <div class="education-details" id="edu1">
-                    <div>
-                      <label for="course"> Course Name</label>
-                      <input type="text" class="form-control" id="course">
-                    </div><br>
-                    <div>
-                      <label for="collage"> Collage Name</label>
-                      <input type="text" class="form-control" id="collage">
-                    </div><br>
-                    <div>
-                      <label for="yop">YOP</label>
-                      <input type="date" class="form-control" id="yop">
-                    </div><br>
-                    <div>
-                      <label for="place">Place</label>
-                      <input type="text" class="form-control" id="place">
-                    </div><br>
-                    <div>
-                      <label for="percentage">Percentage</label>
-                      <input type="text" class="form-control" id="percentage">
-                    </div><br>
-                  </div>
-                </ul>
-              </div>
+
               <div class="form-group">
                 <label for="education">Batchelor Degree:</label>
-                <p onclick="educationTwo()" class="btn btn-lg">ADD</p>
                 <ul>
                   <div class="education-details" id="edu2">
                     <div>
@@ -219,8 +219,36 @@
                 </ul>
               </div>
               <div class="form-group">
+                <label for="education">Master Degree:</label>
+                <p onclick="educationOne()"  style="color: white;" class="btn btn-lg text-light">add more</p>
+                <ul>
+                  <div class="education-details" id="edu1">
+                    <div>
+                      <label for="course"> Course Name</label>
+                      <input type="text" class="form-control" id="course">
+                    </div><br>
+                    <div>
+                      <label for="collage"> Collage Name</label>
+                      <input type="text" class="form-control" id="collage">
+                    </div><br>
+                    <div>
+                      <label for="yop">YOP</label>
+                      <input type="date" class="form-control" id="yop">
+                    </div><br>
+                    <div>
+                      <label for="place">Place</label>
+                      <input type="text" class="form-control" id="place">
+                    </div><br>
+                    <div>
+                      <label for="percentage">Percentage</label>
+                      <input type="text" class="form-control" id="percentage">
+                    </div><br>
+                  </div>
+                </ul>
+              </div>
+              <div class="form-group">
                 <label for="education">PUC/12th:</label>
-                <p onclick="educationThree()" class="btn btn-lg">ADD</p>
+                <p onclick="educationThree()" style="color: white;" class="btn btn-lg">add more</p>
                 <ul>
                   <div class="education-details" id="edu3">
                     <div>
@@ -248,7 +276,7 @@
               </div>
               <div class="form-group">
                 <label for="education">SSLC/10th:</label>
-                <p onclick="educationFour()" class="btn btn-lg">ADD</p>
+                <p onclick="educationFour()" style="color: white;" class="btn btn-lg">add more</p>
                 <ul>
                   <div class="education-details" id="edu4">
                     <div>
@@ -274,73 +302,69 @@
                   </div>
                 </ul>
               </div>
+              <hr>
 
+              <div class="form-group">
+                <label for="skills">SKILLS:</label><br>
+                <em>can add upto 8 skills</em>
+                <ul>
+                  <div class="skill-details">
+                    <div>
+                      <div class="skill1">
+                        <input type="text" id="skill1" name="interest" value="" />
+                        <p onclick="skillTwo()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+
+                      <div class="skill2" id="skill2">
+                        <input type="text" id="python" name="interest" value="" />
+                        <p onclick="skillThree()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+
+
+                      <div class="skill3" id="skill3">
+                        <input type="text" id="python" name="interest" value="" />
+                        <p onclick="skillFour()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+
+                      <div class="skill4" id="skill4">
+                        <input type="text" id="python" name="interest" value="" />
+                        <p onclick="skillFive()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+
+                      <div class="skill5" id="skill5">
+                        <input type="text" id="python" name="interest" value="" />
+                        <p onclick="skillSix()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+
+                      <div class="skill6" id="skill6">
+                        <input type="text" id="python" name="interest" value="" />
+                        <p onclick="skillSeven()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+                      <div class="skill7" id="skill7">
+                        <input type="text" id="python" name="interest" value="" />
+                        <p onclick="skillEight()" class="btn btn-lg btn-light">ADD</p>
+                      </div>
+                      <div class="skill8" id="skill8">
+                        <input type="text" id="python" name="interest" value="" />
+                      </div>
+
+                    </div>
+
+
+                  </div>
+                </ul>
+
+              </div>
+              <hr>
 
             </div>
           </div>
           <div class="col-md-6 form-line">
-            <div class="form-group">
-              <label for="skills">SKILLS:</label><br>
-              <p onclick="skillsF()" class="btn btn-lg">ADD</p>
-              <ul>
-                <div class="skill-details" id="skills">
-
-                  <div>
-                    <input type="checkbox" id="java" name="interest" value="JAVA" />
-                    <label for="JAVA">JAVA</label>
-                    <input type="checkbox" id="python" name="interest" value="PYTHON" />
-                    <label for="PYTHON">PYTHON</label>
-
-                    <input type="checkbox" id="js" name="interest" value="JAVASCRIPT" />
-                    <label for="JAVASCRIPT">JAVASCRIPT</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="dj" name="interest" value="Django" />
-                    <label for="Django">Django</label>
-
-                    <input type="checkbox" id="react" name="interest" value="REACT" />
-                    <label for="REACT">REACT</label>
-
-                    <input type="checkbox" id="flut" name="interest" value="FLUTTER" />
-                    <label for="FLUTTER">FLUTTER</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="vue" name="interest" value="Vue.js" />
-                    <label for="Vue.js">Vue.js</label>
-
-                    <input type="checkbox" id="ruby" name="interest" value="Ruby" />
-                    <label for="Ruby">RUBY</label>
-                    <input type="checkbox" id="go" name="interest" value="Go" />
-                    <label for="go">Go</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="kotlin" name="interest" value="Kotlin" />
-                    <label for="Kotlin">Kotlin</label>
-                    <input type="checkbox" id="PHP" name="interest" value="PHP" />
-                    <label for="PHP">PHP</label>
-
-                    <input type="checkbox" id="C#" name="interest" value="C#" />
-                    <label for="C#">C#</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="swift" name="interest" value="Swift" />
-                    <label for="Swift">Swift</label>
-                    <input type="checkbox" id="rust" name="interest" value="Rust" />
-                    <label for="Rust">Rust</label>
-
-                    <input type="checkbox" id="perl" name="interest" value="Perl" />
-                    <label for="Perl">Perl</label>
-                  </div>
-                  
-                </div>
-              </ul>
-
-            </div>
 
             <div class="form-group">
               <label for="projects">PROJECTS:</label>
               <div>
-                <p onclick="projectOne()" class="btn btn-lg">ADD</p>
+
                 <ul>
                   <div class="project_detail" id="pro1">
                     <div>
@@ -378,11 +402,11 @@
                 </ul>
               </div>
             </div>
-
+            <hr>
             <div class="form-group">
               <label for="intern">INTERNSHIP:</label>
               <div class="form-group">
-                <p onclick="internOne()" class="btn btn-lg">ADD</p>
+
                 <ul>
                   <div class="intern_detail" id="intern1">
                     <div>
@@ -419,37 +443,79 @@
                 </ul>
               </div>
             </div>
+            <hr>
             <div class="form-group">
-              <label for="activities"> ACTIVITIES</label>
-              <textarea class="form-control" id="activities"></textarea>
+              <label for="activities"> ACTIVITIES:</label>
+              <ul>
+                <div class="form-group">Activity 1
+                  <textarea class="activities" id="acti1"></textarea>
+                </div>
+                <div class="form-group">Activity 2
+                  <p onclick="activityTwo()" class="btn btn-lg">ADD</p>
+                  <textarea class="activities" id="acti2"></textarea>
+                </div>
+              </ul>
             </div>
+            <hr>
             <div class="form-group">
-              <label for="interest">INTEREST</label>
-              <input type="text" class="form-control" id="intrest">
+              <label for="certificate"> CERTIFICATE:</label>
+              <ul>
+                <div class="form-group">Certificate 1
+                  <textarea class="certificate" id="certi1"></textarea>
+                </div>
+                <div class="form-group">Certificate 2
+                  <p onclick="certificateTwo()" class="btn btn-lg">ADD</p>
+                  <textarea class="certificate" id="certi2"></textarea>
+                </div>
+              </ul>
             </div>
+            <hr>
+           
             <div class="form-group">
-              <label for="lang">LANGUAGES:</label>
-              <br>
+              <label for="interests">INTERESTS:</label><br>
+              <em>can add upto 5 interests</em>
+              <ul>
+                <div class="interests-details">
+                  <div>
+                    <div class="interest">
+                      <input type="text" id="interest1" name="interest" value="" />
+                      <p onclick="interestTwo()" class="btn btn-lg btn-light">ADD</p>
+                    </div>
+
+                    <div class="interest2" id="interest2">
+                      <input type="text" id="interest" name="interest" value="" />
+                      <p onclick="interestThree()" class="btn btn-lg btn-light">ADD</p>
+                    </div>
+
+
+                    <div class="interest3" id="interest3">
+                      <input type="text" id="interest" name="interest" value="" />
+                      <p onclick="interestFour()" class="btn btn-lg btn-light">ADD</p>
+                    </div>
+
+                    <div class="interest4" id="interest4">
+                      <input type="text" id="interest" name="interest" value="" />
+                      <p onclick="interestFive()" class="btn btn-lg btn-light">ADD</p>
+                    </div>
+
+                    <div class="interest5" id="interest5">
+                      <input type="text" id="interest" name="interest" value="" />
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+
+
+
+            <hr>
+            <div class="form-group">
+              <label for="personal">PERSONAL INFORMATION:</label>
               <div>
-                <ul>
-                  <input type="radio" id="hin" name="language" value="HINDI">
-                  <label for="hindi">HINDI</label><br>
-                  <input type="radio" id="kan" name="language" value="Kannada">
-                  <label for="Kannada">KANNADA</label><br>
-                  <input type="radio" id="Eng" name="language" value="English">
-                  <label for="English">ENGLISH</label>
-                </ul>
-              </div>
-              <br>
-            </div>
-            <div class="form-group">
-              <label for="personal">PERSONEL INFORMATION:</label>
-              <div>
-                <p onclick="personDetail()" class="btn btn-lg">ADD</p>
                 <div class="person_detail" id="person">
                   <ul>
                     <label>DOB</label>
-                    <input type="date" class="form-control" id="dob"><br>
+                    <input  type="date" class="form-control" id="dob"><br>
                     <label>Father_Name</label>
                     <input type="text" class="form-control" id="father"><br>
                     <label>Languages Known</label>
@@ -460,13 +526,9 @@
                 </div>
               </div>
             </div><br>
-            <div>
-              <button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>
-                Submit</button>
-            </div>
-
           </div>
-
+         
+          <button type="button" class="btn btn-success btn-lg submit">Submit</button>
         </form>
       </div>
   </section>
@@ -479,14 +541,7 @@
         x.style.display = "block";
       }
     }
-    function educationTwo() {
-      var x = document.getElementById("edu2");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "block";
-      }
-    }
+
     function educationThree() {
       var x = document.getElementById("edu3");
       if (x.style.display === "none") {
@@ -503,14 +558,7 @@
         x.style.display = "block";
       }
     }
-    function projectOne() {
-      var x = document.getElementById("pro1");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "block";
-      }
-    }
+
     function projectTwo() {
       var x = document.getElementById("pro2");
       if (x.style.display === "none") {
@@ -519,14 +567,7 @@
         x.style.display = "block";
       }
     }
-    function internOne() {
-      var x = document.getElementById("intern1");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "block";
-      }
-    }
+
     function internTwo() {
       var x = document.getElementById("intern2");
       if (x.style.display === "none") {
@@ -535,16 +576,106 @@
         x.style.display = "block";
       }
     }
-    function personDetail() {
-      var x = document.getElementById("person");
+
+    function skillTwo() {
+      var x = document.getElementById("skill2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+
+    }
+    function skillThree() {
+      var x = document.getElementById("skill3");
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
         x.style.display = "block";
       }
     }
-    function skillsF() {
-      var x = document.getElementById("skills");
+    function skillFour() {
+      var x = document.getElementById("skill4");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function skillFive() {
+      var x = document.getElementById("skill5");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function skillSix() {
+      var x = document.getElementById("skill6");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function skillSeven() {
+      var x = document.getElementById("skill7");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function skillEight() {
+      var x = document.getElementById("skill8");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function activityTwo() {
+      var x = document.getElementById("acti2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function certificateTwo() {
+      var x = document.getElementById("certi2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function interestTwo() {
+      var x = document.getElementById("interest2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function interestThree() {
+      var x = document.getElementById("interest3");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function interestFour() {
+      var x = document.getElementById("interest4");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function interestFive() {
+      var x = document.getElementById("interest5");
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
