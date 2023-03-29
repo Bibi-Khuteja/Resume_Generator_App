@@ -60,7 +60,7 @@
       margin-top: 10px;
     }
 
-    #edu1 {
+    #edu2 {
       display: none;
     }
 
@@ -170,7 +170,7 @@
     </div>
     <div class="contact-section">
       <div class="container">
-        <form action="dashboard.jsp">
+        <form action="http://localhost:8080/Resume_Management/InsertData" method="post">
           <div class="col-md-6 form-line">
             <div class="form-group">
               <label for="name">NAME</label>
@@ -186,7 +186,7 @@
             </div>
             <div class="form-group">
               <label for="object">OBJECTIVES</label>
-              <textarea class="form-control" id="object"  name="object" placeholder="Enter Objectives" required></textarea>
+              <textarea class="form-control" id="object"  name="objective" placeholder="Enter Objectives" required></textarea>
             </div>
             <hr>
             <div class="form-group">
@@ -194,54 +194,54 @@
               <div class="form-group">
                 <label for="education">Batchelor Degree:</label>
                 <ul>
-                  <div class="education-details" id="edu2">
+                  <div class="education-details" id="edu1">
                     <div>
                       <label for="course"> Course Name</label>
-                      <input type="text" name="course" class="form-control" id="course">
+                      <input type="text" name="edu1course" class="form-control" id="edu1course">
                     </div><br>
                     <div>
-                      <label for="collage"> Collage Name</label>
-                      <input type="text" name="collage"  class="form-control" id="collage">
+                      <label for="collage"> College Name</label>
+                      <input type="text" name="edu1college" class="form-control" id="edu1collage">
                     </div><br>
                     <div>
                       <label for="yop">YOP</label>
-                      <input type="month" name="yop"  class="form-control" id="yop">
+                      <input type="month" name="edu1yop"  class="form-control" id="edu1yop">
                     </div><br>
                     <div>
                       <label for="place">Place</label>
-                      <input type="text" class="form-control" name="place" id="place">
+                      <input type="text" class="form-control" name="edu1place" id="edu1place">
                     </div><br>
                     <div>
                       <label for="percentage">Percentage</label>
-                      <input type="text" class="form-control" name="percentage"  id="percentage">
+                      <input type="text" class="form-control" name="edu1percentage"  id="edu1percentage">
                     </div><br>
                   </div>
                 </ul>
               </div>
               <div class="form-group">
                 <label for="education">Master Degree:</label>
-                <p onclick="educationOne()"  style="color: white;" class="btn btn-lg text-light">add</p>
+                <p onclick="educationTwo()"  style="color: white;" class="btn btn-lg text-light">add</p>
                 <ul>
-                  <div class="education-details" id="edu1">
+                  <div class="education-details" id="edu2">
                     <div>
                       <label for="course"> Course Name</label>
-                      <input type="text" class="form-control" name="course" id="course">
+                      <input type="text" class="form-control" name="edu2course" id="edu2course">
                     </div><br>
                     <div>
-                      <label for="collage"> Collage Name</label>
-                      <input type="text" class="form-control" name="collage" id="collage">
+                      <label for="collage"> College Name</label>
+                      <input type="text" class="form-control" name="edu2college" id="edu2collage">
                     </div><br>
                     <div>
                       <label for="yop">YOP</label>
-                      <input type="month" class="form-control" name="yop" id="yop">
+                      <input type="month" class="form-control" name="edu2yop" id="edu2yop">
                     </div><br>
                     <div>
                       <label for="place">Place</label>
-                      <input type="text" class="form-control" name="place"  id="place">
+                      <input type="text" class="form-control" name="edu2place"  id="edu2place">
                     </div><br>
                     <div>
                       <label for="percentage">Percentage</label>
-                      <input type="text" class="form-control" name="percentage"  id="percentage">
+                      <input type="text" class="form-control" name="edu2percentage"  id="edu2percentage">
                     </div><br>
                   </div>
                 </ul>
@@ -253,23 +253,23 @@
                   <div class="education-details" id="edu3">
                     <div>
                       <label for="course"> Course Name</label>
-                      <input type="text" class="form-control" name="course"  id="course">
+                      <input type="text" class="form-control" name="edu3course"  id="edu3course">
                     </div><br>
                     <div>
-                      <label for="collage"> Collage Name</label>
-                      <input type="text" class="form-control" name="collage"  id="collage">
+                      <label for="collage"> College Name</label>
+                      <input type="text" class="form-control" name="edu3college"  id="edu3collage">
                     </div><br>
                     <div>
                       <label for="yop">YOP</label>
-                      <input type="month" class="form-control" name="yop" id="yop">
+                      <input type="month" class="form-control" name="edu3yop" id="edu3yop">
                     </div><br>
                     <div>
                       <label for="place">Place</label>
-                      <input type="text" class="form-control" name="place"  id="place">
+                      <input type="text" class="form-control" name="edu3place"  id="edu3place">
                     </div><br>
                     <div>
                       <label for="percentage">Percentage</label>
-                      <input type="text" class="form-control" name="percentage" id="percentage">
+                      <input type="text" class="form-control" name="edu3percentage" id="edu3percentage">
                     </div><br>
                   </div>
                 </ul>
@@ -281,23 +281,23 @@
                   <div class="education-details" id="edu4">
                     <div>
                       <label for="course"> Course Name</label>
-                      <input type="text" class="form-control" name="course" id="course">
+                      <input type="text" class="form-control" name="edu4course" id="edu4course">
                     </div><br>
                     <div>
                       <label for="collage"> Collage Name</label>
-                      <input type="text" class="form-control" name="collage"  id="collage">
+                      <input type="text" class="form-control" name="edu4college"  id="edu4collage">
                     </div><br>
                     <div>
                       <label for="yop">YOP</label>
-                      <input type="month" class="form-control" name="yop" id="yop">
+                      <input type="month" class="form-control" name="edu4yop" id="edu4yop">
                     </div><br>
                     <div>
                       <label for="place">Place</label>
-                      <input type="text" class="form-control" name="place" id="place">
+                      <input type="text" class="form-control" name="edu4place" id="edu4place">
                     </div><br>
                     <div>
                       <label for="percentage">Percentage</label>
-                      <input type="text" class="form-control" name="percentage" id="percentage">
+                      <input type="text" class="form-control" name="edu4percentage" id="edu4percentage">
                     </div><br>
                   </div>
                 </ul>
@@ -418,6 +418,14 @@
                       <input type="text"  name="intern1company"  class="form-control" id="company">
                     </div><br>
                     <div>
+                      <label for="from">FROM DATE</label>
+                      <input type="month"  name="exp1From"  class="form-control" id="exp1From">
+                    </div><br>
+                    <div>
+                      <label for="from">TO DATE</label>
+                      <input type="month"  name="exp1To"  class="form-control" id="exp1To">
+                    </div><br>
+                    <div>
                       <label for="desc">Outcome</label>
                       <textarea  name="intern1outcome" class="form-control" id="outcome"></textarea>
                     </div><br>
@@ -434,6 +442,14 @@
                     <div>
                       <label for="technology"> Company Name</label>
                       <input type="text"  name="intern2company" class="form-control" id="company">
+                    </div><br>
+                    <div>
+                      <label for="from">FROM DATE</label>
+                      <input type="month"  name="exp2From"  class="form-control" id="exp2From">
+                    </div><br>
+                    <div>
+                      <label for="from">TO DATE</label>
+                      <input type="month"  name="exp2To"  class="form-control" id="exp2To">
                     </div><br>
                     <div>
                       <label for="desc">Outcome</label>
@@ -517,7 +533,7 @@
                 <div class="person_detail" id="person">
                   <ul>
                     <label>DOB</label>
-                    <input  type="month"  name="dob"  class="form-control" id="dob"><br>
+                    <input  type="date"  name="dob"  class="form-control" id="dob"><br>
                     <label>Father_Name</label>
                     <input type="text"  name="fname" class="form-control" id="father"><br>
                     <label>Languages Known</label>
@@ -530,13 +546,13 @@
             </div><br>
           </div>
          
-          <button type="submit" class="btn btn-success btn-lg submit">Submit</button>
+          <input type="submit" class="btn btn-success btn-lg submit" value="submit">
         </form>
       </div>
   </section>
   <script>
-    function educationOne() {
-      var x = document.getElementById("edu1");
+    function educationTwo() {
+      var x = document.getElementById("edu2");
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {

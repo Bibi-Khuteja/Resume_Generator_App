@@ -6,11 +6,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Random;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.catalina.ha.backend.Sender;
 
 import com.resume.connection.ResumeCon;
 
@@ -36,21 +39,25 @@ public class InsertData extends HttpServlet {
 	String edu1Title;
 	String edu1Yop;
 	String edu1Collage;
+	String edu1Place;
 	String edu1Percentage;
 
 	String edu2Title;
 	String edu2Yop;
 	String edu2Collage;
+	String edu2Place;
 	String edu2Percentage;
 
 	String edu3Title;
 	String edu3Yop;
 	String edu3Collage;
+	String edu3Place;
 	String edu3Percentage;
 
 	String edu4Title;
 	String edu4Yop;
 	String edu4Collage;
+	String edu4Place;
 	String edu4Percentage;
 //	here above we have declared variables for education table
 	int expId;
@@ -139,22 +146,26 @@ public class InsertData extends HttpServlet {
 
 		edu1Title = request.getParameter("edu1course");
 		edu1Yop = request.getParameter("edu1yop");
-		edu1Collage = request.getParameter("edu1collage");
+		edu1Collage = request.getParameter("edu1college");
+		edu1Place = request.getParameter("edu1place");
 		edu1Percentage = request.getParameter("edu1percentage");
 
 		edu2Title = request.getParameter("edu2course");
 		edu2Yop = request.getParameter("edu2yop");
-		edu2Collage = request.getParameter("edu2collage");
+		edu2Collage = request.getParameter("edu2college");
+		edu2Place = request.getParameter("edu2place");
 		edu2Percentage = request.getParameter("edu2percentage");
 
 		edu3Title = request.getParameter("edu3course");
 		edu3Yop = request.getParameter("edu3yop");
-		edu3Collage = request.getParameter("edu3collage");
+		edu3Collage = request.getParameter("edu3college");
+		edu3Place = request.getParameter("edu3place");
 		edu3Percentage = request.getParameter("edu3percentage");
 
 		edu4Title = request.getParameter("edu4course");
 		edu4Yop = request.getParameter("edu4yop");
-		edu4Collage = request.getParameter("edu4collage");
+		edu4Collage = request.getParameter("edu4college");
+		edu4Place = request.getParameter("edu4place");
 		edu4Percentage = request.getParameter("edu4percentage");
 //		here we end education
 
@@ -295,9 +306,9 @@ public class InsertData extends HttpServlet {
 
 				int skills = skillStatement.executeUpdate();
 				if (skills > 0) {
-					System.out.print("Inserted candidate skills");
+					System.out.println("Inserted candidate skills");
 				} else {
-					System.out.print("Failed to insert candidate skills");
+					System.out.println("Failed to insert candidate skills");
 				}
 				
 			
@@ -318,9 +329,9 @@ public class InsertData extends HttpServlet {
 
 				int project = projectStatement.executeUpdate();
 				if (project > 0) {
-					System.out.print("Inserted candidate project");
+					System.out.println("Inserted candidate project");
 				} else {
-					System.out.print("Failed to insert candidate project");
+					System.out.println("Failed to insert candidate project");
 				}
 				
 				
@@ -347,19 +358,20 @@ public class InsertData extends HttpServlet {
 
 				int experience =  expStatement.executeUpdate();
 				if (experience > 0) {
-					System.out.print("Inserted candidate experience");
+					System.out.println("Inserted candidate experience");
 					
-					response.sendRedirect("dashboardfresher.jsp?id="+id+" ");
+					
 					
 				} else {
-					System.out.print("Failed to insert candidate experience");
-				}
-				
-
+					
+					System.out.println("Failed to insert candidate experience");
+				}  
+				response.sendRedirect("dashboardfresher.jsp?id="+id);
 
 			} else {
 				System.out.println("Failed to insert data into candidate_details table");
 			}
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -74,6 +74,10 @@
                 </h1>
 
             </div>
+            <%
+            String id=request.getParameter("id");
+            System.out.println(id);
+            %>
         </section><br>
         <!-- <button class="btn btn-md btn-lg btn-dark btn-success col text-center ">
             <img src="frshTem1.png" width="25" />
@@ -82,13 +86,13 @@
         <div class="text-center">
         
             <button type="submit" class="btn btn-dark btn-lg ">
-            <a href="temp1Frsh.html"><img src="frshTem1.png" width="50"  ></a>
+            <a href="temp1Frsh.jsp?id=<%=id%>"><img src="frshTem1.png" width="50"  ></a>
                 
                 
                 TEMPELETE 1</button><a href="tem1frsh.html"></a>
          
             <button type="submit" class="btn btn-dark btn-lg ">
-             <a href="temp2Frsh.html">
+             <a href="temp2Frsh.jsps">
                 <img src="frshTem2.png" width="50" />
                 </a>
                 TEMPELETE 2</button>
