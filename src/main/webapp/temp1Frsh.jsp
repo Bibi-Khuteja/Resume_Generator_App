@@ -93,13 +93,13 @@ h3 {
 	String exp1Company;
 	String exp1From;
 	String exp1To;
-	String exp1Desc="";
+	String exp1Desc = "";
 
 	String exp2Desig;
 	String exp2Company;
 	String exp2From;
 	String exp2To;
-	String exp2Desc="";
+	String exp2Desc = "";
 
 	String exp3Desig;
 	String exp3Company;
@@ -152,8 +152,7 @@ h3 {
 	System.out.println(id);
 
 	try {
-		String query = "SELECT C.*,I.*,S.*,E.*,EX.*,P.* FROM resumegenerator.candidate_details C,resumegenerator.candidate_interests I,resumegenerator.candidate_skills S,resumegenerator.candidate_education E,resumegenerator.candidate_experience EX,resumegenerator.candidate_projects P where C.can_id=I.can_id AND C.can_id=S.can_id AND C.can_id=E.can_id AND C.can_id=EX.can_id AND C.can_id=P.can_id AND C.can_id='"
-		+ id + "';";
+		String query = "SELECT C.*,I.*,S.*,E.*,EX.*,P.* FROM resumegenerator.candidate_details C,resumegenerator.candidate_interests I,resumegenerator.candidate_skills S,resumegenerator.candidate_education E,resumegenerator.candidate_experience EX,resumegenerator.candidate_projects P where C.can_id=I.can_id AND C.can_id=S.can_id AND C.can_id=E.can_id AND C.can_id=EX.can_id AND C.can_id=P.can_id AND C.can_id='"+ id + "';";
 		Connection con = ResumeCon.makeConnection();
 		Statement s = con.createStatement();
 		ResultSet rs = s.executeQuery(query);
@@ -195,19 +194,19 @@ h3 {
 			exp1Company = rs.getString("exp1_company");
 			exp1From = rs.getString("exp1_fromdate");
 			exp1From = rs.getString("exp1_todate");
-			exp1Company = rs.getString("exp1_desc");
+			exp1Desc = rs.getString("exp1_desc");
 
 			exp2Desig = rs.getString("exp2_desig");
 			exp2Company = rs.getString("exp2_company");
 			exp2From = rs.getString("exp2_fromdate");
 			exp2From = rs.getString("exp2_todate");
-			exp2Company = rs.getString("exp2_desc");
+			exp2Desc = rs.getString("exp2_desc");
 
 			exp3Desig = rs.getString("exp3_desig");
 			exp3Company = rs.getString("exp3_company");
 			exp3From = rs.getString("exp3_fromdate");
 			exp3From = rs.getString("exp3_todate");
-			exp3Company = rs.getString("exp3_desc");
+			exp3Desc = rs.getString("exp3_desc");
 
 			interest1 = rs.getString("intr1");
 			interest2 = rs.getString("intr2");
@@ -251,84 +250,205 @@ h3 {
 			</p>
 
 			<h3>EDUCATION</h3>
-			<label>
-				<ul>
-					<li><b><%=edu1Collage%></b><br> <strong><%=edu2Title%></strong>
-						<br>CGPA <strong><%=edu1Percentage%></strong> in <strong><%=edu1Yop%></strong></li>
-					<li><b><%=edu2Collage%></b><br> <strong><%=edu2Title%></strong>
-						<br>CGPA <strong><%=edu2Percentage%></strong> in <strong><%=edu2Yop%></strong></li>
-					<li><b><%=edu3Collage%></b><br> <strong><%=edu3Title%></strong><br>
-						<strong><%=edu3Percentage%>%</strong> in <strong><%=edu3Yop%></strong></li>
-					<li><b><%=edu4Collage%></b><br> <strong><%=edu4Title%></strong><br>
-						<strong><%=edu4Percentage%>%</strong> in <strong><%=edu4Yop%></strong></li>
-				</ul>
-			</label>
+
+			<ul>
+
+				<%
+				if (edu1Collage != null && edu1Title != null && edu1Percentage != null && edu1Yop != null
+						&& !edu1Collage.trim().isEmpty() && !edu1Title.trim().isEmpty() && !edu1Percentage.trim().isEmpty()
+						&& !edu1Yop.trim().isEmpty()) {
+				%>
+				<li><b><%=edu1Collage%></b><br> <strong><%=edu2Title%></strong>
+					<br>CGPA <strong><%=edu1Percentage%></strong> in <strong><%=edu1Yop%></strong></li>
+				<%
+				}
+				%>
+
+				<%
+				if (edu2Collage != null && edu2Title != null && edu2Percentage != null && edu2Yop != null
+						&& !edu2Collage.trim().isEmpty() && !edu2Title.trim().isEmpty() && !edu2Percentage.trim().isEmpty()
+						&& !edu2Yop.trim().isEmpty()) {
+				%>
+				<li><b><%=edu2Collage%></b><br> <strong><%=edu2Title%></strong>
+					<br>CGPA <strong><%=edu2Percentage%></strong> in <strong><%=edu2Yop%></strong></li>
+				<%
+				}
+				%>
+
+				<%
+				if (edu3Collage != null && edu3Title != null && edu3Percentage != null && edu3Yop != null
+						&& !edu3Collage.trim().isEmpty() && !edu3Title.trim().isEmpty() && !edu3Percentage.trim().isEmpty()
+						&& !edu3Yop.trim().isEmpty()) {
+				%>
+				<li><b><%=edu3Collage%></b><br> <strong><%=edu3Title%></strong>
+					<br>CGPA <strong><%=edu3Percentage%></strong> in <strong><%=edu3Yop%></strong></li>
+				<%
+				}
+				%>
+
+
+				<%
+				if (edu4Collage != null && edu4Title != null && edu4Percentage != null && edu4Yop != null
+						&& !edu4Collage.trim().isEmpty() && !edu4Title.trim().isEmpty() && !edu4Percentage.trim().isEmpty()
+						&& !edu4Yop.trim().isEmpty()) {
+				%>
+				<li><b><%=edu4Collage%></b><br> <strong><%=edu4Title%></strong>
+					<br>CGPA <strong><%=edu4Percentage%></strong> in <strong><%=edu4Yop%></strong></li>
+				<%
+				}
+				%>
+
+			</ul>
+
+
 			<h3>SKILLS</h3>
 			<ul>
+				<%
+				if (skills1 != null && !skills1.trim().isEmpty()) {
+				%>
 				<li><%=skills1%></li>
+				<%
+				}
+				%>
+				<%
+				if (skills2 != null && !skills2.trim().isEmpty()) {
+				%>
 				<li><%=skills2%></li>
+				<%
+				}
+				%>
+				<%
+				if (skills3 != null && !skills3.trim().isEmpty()) {
+				%>
 				<li><%=skills3%></li>
+				<%
+				}
+				%>
+				<%
+				if (skills4 != null && !skills4.trim().isEmpty()) {
+				%>
 				<li><%=skills4%></li>
+				<%
+				}
+				%>
+				<%
+				if (skills5 != null && !skills5.trim().isEmpty()) {
+				%>
 				<li><%=skills5%></li>
+				<%
+				}
+				%>
 
 			</ul>
 			<h3>PROJECTS</h3>
 			<ul>
+				<%
+				if (pro1Title != null && pro1Desc != null && pro1Tech != null
+						&& !pro1Title.trim().isEmpty() && !pro1Desc.trim().isEmpty() && !pro1Tech.trim().isEmpty()) {
+				%>
 				<li><strong><%=pro1Title%></strong><br> <b>Description:</b><br><%=pro1Desc%>
-				<br><b>Technology Used:</b><br><%=pro1Tech%></li>
+					<br> <b>Technology Used:</b><br><%=pro1Tech%></li>
+					<%} %>
 				<br>
+				<%
+				if (pro2Title != null && pro2Desc != null && pro2Tech != null
+						&& !pro2Title.trim().isEmpty() && !pro2Desc.trim().isEmpty() && !pro2Tech.trim().isEmpty()) {
+				%>
 				<li><strong><%=pro2Title%></strong><br> <b>Description:</b><br><%=pro2Desc%>
-				<br><b>Technology Used:</b><br><%=pro2Tech%></li>
+					<br> <b>Technology Used:</b><br><%=pro2Tech%></li>
+					<%} %>
 
 			</ul>
 
 			<h3>INTERNSHIP</h3>
 			<ul>
 
+				<%
+				if (exp1Company != null && exp1Desc != null && !exp1Company.trim().isEmpty() && !exp1Desc.trim().isEmpty()) {
+				%>
 				<li><strong>COMPANY NAME:</strong><b><%=exp1Company%></b></li>
 				<br>
-				<b>Outcome:</b><ul>
-				<li><%=exp1Desc%></li></ul>
+				<b>Outcome:</b>
+				<ul>
+					<li><%=exp1Desc%></li>
+				</ul>
+				<%
+				}
+				%>
 
-				<li><strong>COMPANY NAME</strong><%=exp2Company%></li>
-
+				<%
+				if (exp2Company != null && exp2Desc != null && !exp2Company.trim().isEmpty() && !exp2Desc.trim().isEmpty()) {
+				%>
+				<li><strong>COMPANY NAME:</strong><b><%=exp2Company%></b></li>
 				<br>
-				<b>Outcome:</b><ul>
-				<li><%=exp2Desc%></li></ul>
-
-			</ul>
-
+				<b>Outcome:</b>
+				<ul>
+					<li><%=exp2Desc%></li>
+				</ul>
+				<%
+				}
+				%>
+				</ul>
+				
 
 			<h3>ACTIVITIES</h3>
 			<ul>
+			<%if (activity1.trim().isEmpty()==false && activity1!=null){ %>
 				<li><%=activity1%></li>
+			<%} %>
+					<%if (activity2.trim().isEmpty() ==false && activity2!=null){ %>
 				<li><%=activity2%></li>
+				<%} %>
 			</ul>
 
 
 			<h3>CERTIFICATE</h3>
 			<ul>
+			<%if (certificate1.trim().isEmpty() ==false && certificate1!=null){ %>
 				<li><%=certificate1%></li>
+				<%} %>
+				<%if (certificate2.trim().isEmpty() ==false && certificate2!=null){ %>
 				<li><%=certificate2%></li>
+				<%} %>
 			</ul>
 
 			<h3>INTERESTS</h3>
 			<ul>
-			<%if(interest1!=null || interest1!=" " || interest1.isEmpty()==false){  %>
+				<%
+				if (interest1 != null && interest1 != " " && interest1.isEmpty() == false) {
+				%>
 				<li><%=interest1%></li>
-				<%} %>
-				<%if(interest2!=null || interest2!=" " || interest2.isEmpty()==false){  %>
+				<%
+				}
+				%>
+				<%
+				if (interest2 != null && interest2 != " " && interest2.isEmpty() == false) {
+				%>
 				<li><%=interest2%></li>
-				<%} %>
-				<%if(interest3!=null || interest3!=" " || interest3.isEmpty()==false){  %>
+				<%
+				}
+				%>
+				<%
+				if (interest3 != null && interest3 != " " && interest3.isEmpty() == false) {
+				%>
 				<li><%=interest3%></li>
-				<%} %>
-				<%if(interest4!=null || interest4!=" " || interest4.isEmpty()==false){  %>
+				<%
+				}
+				%>
+				<%
+				if (interest4 != null && interest4 != " " && interest4.isEmpty() == false) {
+				%>
 				<li><%=interest4%></li>
-				<%} %>
-				<%if(interest5!=null || interest5!=" " || interest5.isEmpty()==false){  %>
+				<%
+				}
+				%>
+				<%
+				if (interest5 != null && interest5 != " " && interest5.isEmpty() == false) {
+				%>
 				<li><%=interest5%></li>
-				<%} %>
+				<%
+				}
+				%>
 			</ul>
 
 
@@ -351,7 +471,7 @@ h3 {
 			<h3>DECLARATION</h3>
 			<p>Hereby, I declare that the information provided above is true
 				to the best of my knowledge and belief</p>
-			<h5 style="text-align: right;">Bibi Khuteja</h5>
+			<h5 style="text-align: right;"><%=name %></h5>
 
 		</div>
 	</div>

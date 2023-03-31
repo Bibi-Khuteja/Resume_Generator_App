@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.resume.connection.ResumeCon;
 
-@WebServlet("/InsertData")
-public class InsertData extends HttpServlet {
+@WebServlet("/InsertDataExp")
+public class InsertDataExp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	/* here we are declaring the variables */
 	int id;
@@ -363,7 +363,7 @@ public class InsertData extends HttpServlet {
 					
 					System.out.println("Failed to insert candidate experience");
 				}  
-				response.sendRedirect("dashboardfresher.jsp?id="+id);
+				response.sendRedirect("dashboardexperience.jsp?id="+id);
 
 			} else {
 				System.out.println("Failed to insert data into candidate_details table");

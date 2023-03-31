@@ -86,13 +86,13 @@
         <div class="text-center">
         
             <button type="submit" class="btn btn-dark btn-lg ">
-            <a href="temp1Frsh.jsp?id=<%=id%>"><img src="frshTem1.png" width="50"  ></a>
+            <a href="temp1Exp.jsp?id=<%=id%>"><img src="frshTem1.png" width="50"  ></a>
                 
                 
                 TEMPELETE 1</button><a href="tem1frsh.html"></a>
          
             <button type="submit" class="btn btn-dark btn-lg ">
-             <a href="temp2Frsh.jsp?id=<%=id%>">
+             <a href="temp2Exp.jsp?id=<%=id%>">
                 <img src="frshTem2.png" width="50" />
                 </a>
                 TEMPELETE 2</button>

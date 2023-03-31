@@ -1,8 +1,7 @@
 package com.resume.connection;
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
-
-import com.mysql.cj.jdbc.Driver;
 
 public class ResumeCon {
   
