@@ -365,7 +365,7 @@ h3 {
 						&& !edu1Collage.trim().isEmpty() && !edu1Title.trim().isEmpty() && !edu1Percentage.trim().isEmpty()
 						&& !edu1Yop.trim().isEmpty()) {
 				%>
-				<li><b><%=edu1Collage%></b><br> <strong><%=edu2Title%></strong>
+				<li><b><%=edu1Collage%></b><br> <strong><%=edu1Title%></strong>
 					<br>CGPA <strong><%=edu1Percentage%></strong> in <strong><%=edu1Yop%></strong></li>
 				<%
 				}
@@ -390,7 +390,7 @@ h3 {
 			<%if (activity1.trim().isEmpty()==false && activity1!=null){ %>
 				<li><%=activity1%></li>
 			<%} %>
-					<%if (activity2.trim().isEmpty() ==false && activity2!=null){ %>
+					<%if (activity2.trim().isEmpty()==false && activity2!=null){ %>
 				<li><%=activity2%></li>
 				<%} %>
 			</ul>

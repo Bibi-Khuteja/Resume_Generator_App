@@ -365,7 +365,7 @@
                     </div><br>
                     <div>
                       <label for="technology"> Technology used</label>
-                      <input type="text" name="pro23echnology"  class="form-control" id="technology">
+                      <input type="text" name="pro3technology"  class="form-control" id="technology">
                     </div><br>
                     <div>
                       <label for="desc">Description</label>
